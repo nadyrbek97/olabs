@@ -70,12 +70,6 @@ public class Viewer {
         buttonSix.addActionListener(controller);
         buttonSix.setActionCommand("Y");
 
- 	JButton buttonMultiplication = new JButton("*");
-        buttonMultiplication.setBounds(230, 170, 50, 50);
-        buttonMultiplication.addActionListener(controller);
-        buttonMultiplication.setActionCommand("*");
-
-
         JButton buttonOne = new JButton("%");
         buttonOne.setBounds(50, 230, 50, 50);
         buttonOne.setForeground(java.awt.Color.magenta);
@@ -100,16 +94,30 @@ public class Viewer {
         buttonZero.addActionListener(controller);
         buttonZero.setActionCommand("G");
 
+        JButton buttonMultiplication = new JButton("*");
+        buttonMultiplication.setBounds(230, 170, 50, 50);
+        buttonMultiplication.addActionListener(controller);
+        buttonMultiplication.setActionCommand("*");
 
         JButton buttonPlus = new JButton("+");
         buttonPlus.setBounds(230, 290, 50, 50);
         buttonPlus.addActionListener(controller);
         buttonPlus.setActionCommand("+");
 
+        JButton buttonMinus = new JButton("-");
+        buttonMinus.setBounds(230, 230, 50, 50);
+        buttonMinus.addActionListener(controller);
+        buttonMinus.setActionCommand("-");
+
         JButton buttonEqually = new JButton("=");
         buttonEqually.setBounds(290, 230, 50, 110);
         buttonEqually.addActionListener(controller);
         buttonEqually.setActionCommand("=");
+
+        JButton buttonClear = new JButton("C");
+        buttonClear.setBounds(290, 170, 50, 50);
+        buttonClear.addActionListener(controller);
+        buttonClear.setActionCommand("C");
 
 	JPanel panel = new JPanel();
 
@@ -122,7 +130,6 @@ public class Viewer {
         panel.add(buttonFour);
         panel.add(buttonFive);
         panel.add(buttonSix);
-        panel.add(buttonMultiplication);
 
         panel.add(buttonOne);
         panel.add(buttonTwo);
@@ -132,10 +139,20 @@ public class Viewer {
         panel.add(buttonZero);
         panel.add(buttonPlus);
 
+        panel.add(buttonClear);
+
 	return panel;
     }
 
     public void update(String value) {
         textField.setText(value);
+    }
+
+    public String getText(){
+        return textField.getText();
+    }
+
+    public void clearTextField(){
+        textField.setText("");
     }
 }
