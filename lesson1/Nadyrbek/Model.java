@@ -49,8 +49,6 @@ public class Model {
                 break;
         }
 
-
-
     }
 
     private int deCodeStringToInt(String text){
@@ -69,7 +67,6 @@ public class Model {
         for(int i = 0; i < text.length(); i++){
             result = result * 10 + resultArray[i];
         }
-
         return result;
     }
 
