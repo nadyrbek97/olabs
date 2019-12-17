@@ -6,6 +6,7 @@ import javax.swing.JTextField;
 public class Viewer {
 
     private JTextField textField;
+    private JTextField textField2;
 
     public Viewer() {
         Controller controller = new Controller(this);
@@ -16,16 +17,23 @@ public class Viewer {
         textField.setHorizontalAlignment(JTextField.RIGHT);
         textField.setBounds(50, 50, 230, 50);
 
+        textField2 = new JTextField();
+        textField2.setFont(new java.awt.Font("Alergia", java.awt.Font.BOLD, 25));
+        textField2.setForeground(java.awt.Color.magenta);
+        textField2.setHorizontalAlignment(JTextField.RIGHT);
+        textField2.setBounds(50, 50, 170, 50);
+
 	JPanel panel = getCenterJPanel(controller);
         panel.setBounds(0, 0, 350, 350);
 //	panel.setBackground(java.awt.Color.black);
 
 
         JFrame frame = new JFrame("Intern Labs O!");
-        frame.setSize(400, 420);
+        frame.setSize(400, 470);
         frame.setLocation(100, 50);
         frame.setLayout(null);
         frame.add(textField);
+	    frame.add(textField2); // second text field
         frame.add(panel);
 
         frame.setVisible(true);
