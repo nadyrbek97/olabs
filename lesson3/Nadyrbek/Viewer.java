@@ -41,100 +41,100 @@ public class Viewer {
 	buttonClear.addActionListener(controller);
         buttonClear.setActionCommand("Clear");
 
-        JButton buttonSeven = new JButton("7");
+        JButton buttonSeven = new JButton("@");
         buttonSeven.setBounds(50, 110, 50, 50);
         buttonSeven.setForeground(java.awt.Color.magenta);
         buttonSeven.addActionListener(controller);
-        buttonSeven.setActionCommand("Seven");
+        buttonSeven.setActionCommand("@");
 
-        JButton buttonEight = new JButton("8");
+        JButton buttonEight = new JButton("D");
         buttonEight.setBounds(110, 110, 50, 50);
         buttonEight.setForeground(java.awt.Color.magenta);
         buttonEight.addActionListener(controller);
-        buttonEight.setActionCommand("Eight");
+        buttonEight.setActionCommand("D");
 
-        JButton buttonNine = new JButton("9");
+        JButton buttonNine = new JButton("!");
         buttonNine.setBounds(170, 110, 50, 50);
         buttonNine.setForeground(java.awt.Color.magenta);
         buttonNine.addActionListener(controller);
-        buttonNine.setActionCommand("Nine");
+        buttonNine.setActionCommand("!");
 
         JButton buttonDivide = new JButton("/");
         buttonDivide.setBounds(230, 110, 50, 50);
         buttonDivide.addActionListener(controller);
-        buttonDivide.setActionCommand("Divide");
+        buttonDivide.setActionCommand("/");
 
-        JButton buttonFour = new JButton("4");
+        JButton buttonFour = new JButton("X");
         buttonFour.setBounds(50, 170, 50, 50);
         buttonFour.setForeground(java.awt.Color.magenta);
         buttonFour.addActionListener(controller);
-        buttonFour.setActionCommand("Four");
+        buttonFour.setActionCommand("X");
 
-        JButton buttonFive = new JButton("5");
+        JButton buttonFive = new JButton("#");
         buttonFive.setBounds(110, 170, 50, 50);
         buttonFive.setForeground(java.awt.Color.magenta);
         buttonFive.addActionListener(controller);
-        buttonFive.setActionCommand("Five");
+        buttonFive.setActionCommand("#");
 
-        JButton buttonSix = new JButton("6");
+        JButton buttonSix = new JButton("Y");
         buttonSix.setBounds(170, 170, 50, 50);
         buttonSix.setForeground(java.awt.Color.magenta);
         buttonSix.addActionListener(controller);
-        buttonSix.setActionCommand("Six");
+        buttonSix.setActionCommand("Y");
 
         JButton buttonMultiplication = new JButton("*");
         buttonMultiplication.setBounds(230, 170, 50, 50);
         buttonMultiplication.addActionListener(controller);
-        buttonMultiplication.setActionCommand("Mult");
+        buttonMultiplication.setActionCommand("*");
 
         JButton buttonPercent = new JButton("%");
         buttonPercent.setBounds(290, 170, 50, 50);
         buttonPercent.addActionListener(controller);
-        buttonPercent.setActionCommand("Percent");
+        buttonPercent.setActionCommand("%");
 
-        JButton buttonOne = new JButton("1");
+        JButton buttonOne = new JButton("%");
         buttonOne.setBounds(50, 230, 50, 50);
         buttonOne.setForeground(java.awt.Color.magenta);
         buttonOne.addActionListener(controller);
-        buttonOne.setActionCommand("One");
+        buttonOne.setActionCommand("%");
 
-        JButton buttonTwo = new JButton("2");
+        JButton buttonTwo = new JButton("F");
         buttonTwo.setBounds(110, 230, 50, 50);
         buttonTwo.setForeground(java.awt.Color.magenta);
         buttonTwo.addActionListener(controller);
-        buttonTwo.setActionCommand("Two");
+        buttonTwo.setActionCommand("F");
 
-        JButton buttonThree = new JButton("3");
+        JButton buttonThree = new JButton("$");
         buttonThree.setBounds(170, 230, 50, 50);
         buttonThree.setForeground(java.awt.Color.magenta);
         buttonThree.addActionListener(controller);
-        buttonThree.setActionCommand("Three");
+        buttonThree.setActionCommand("$");
 
-        JButton buttonZero = new JButton("0");
+        JButton buttonZero = new JButton("G");
         buttonZero.setBounds(50, 290, 110, 50);
         buttonZero.setForeground(java.awt.Color.magenta);
         buttonZero.addActionListener(controller);
-        buttonZero.setActionCommand("Zero");
+        buttonZero.setActionCommand("G");
 
         JButton buttonComma = new JButton(",");
         buttonComma.setBounds(170, 290, 50, 50);
         buttonComma.addActionListener(controller);
-        buttonComma.setActionCommand("Comma");
+        buttonComma.setActionCommand(",");
 
         JButton buttonPlus = new JButton("+");
         buttonPlus.setBounds(230, 290, 50, 50);
         buttonPlus.addActionListener(controller);
-        buttonPlus.setActionCommand("Plus");
+        buttonPlus.setActionCommand("+");
 
         JButton buttonMinus = new JButton("-");
         buttonMinus.setBounds(230, 230, 50, 50);
         buttonMinus.addActionListener(controller);
-        buttonMinus.setActionCommand("Minus");
+        buttonMinus.setActionCommand("-");
 
         JButton buttonEqually = new JButton("=");
         buttonEqually.setBounds(290, 230, 50, 110);
         buttonEqually.addActionListener(controller);
-        buttonEqually.setActionCommand("Equal");
+        buttonEqually.setActionCommand("=");
 
 	JPanel panel = new JPanel();
 	panel.setLayout(null);
@@ -167,5 +167,13 @@ public class Viewer {
 
     public void update(String value) {
         textField.setText(value);
+    }
+
+    public String getText(){
+        return textField.getText();
+    }
+
+    public void clearTextField(){
+        textField.setText("");
     }
 }

@@ -1,0 +1,6 @@
+public Z{
+	public Z(){
+		System.out.println("start Z");
+	}
+
+}
